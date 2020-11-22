@@ -26,17 +26,17 @@ function* take(n, iter) {
     }
 }
 
-const values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const result = take(
-    3,
-    map(
-        filter(values, n => n % 2 === 0),
-        n => n * 10
-    )
-);
+// const values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const result = take(
+//     3,
+//     map(
+//         filter(values, n => n % 2 === 0),
+//         n => n * 10
+//     )
+// );
 // 아래 로직이 실행되기 전까지 generator는 실행되지 않는다.
 // 이렇게 값이 필요한 순간에만 실행되는 것을 지연평가(lazy evaluation)라고 한다.
-console.log([...result]);
+// console.log([...result]);
 
 // 2. generator를 사용하여 값을 무한대로 표현하기
 function* naturalNumbers() {
@@ -46,7 +46,7 @@ function* naturalNumbers() {
     }
 }
 
-const vaules = naturalNumbers();
+const values = naturalNumbers();
 const result = take(
     3,
     map(

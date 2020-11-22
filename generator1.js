@@ -17,21 +17,19 @@ const gen = f1();
 
 // generator 객체는 아래와 같은 method들을 갖는다.
 
-console.dir(">> gen: {", gen, "}");
-
 // 3. next
 // next method를 호출하여 다음 yield 까지 실행하게 된다.
-console.log(gen.next());
-console.log(gen.next());
-console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
 
 // 4. return
 // return을 호출하게 될 경우 done이 true가 되고,
 // 전달한 parameter가 value로 설정된 값이 반횐되며,
 // generator 함수는 종료되게 된다.
-// console.log(gen.next());
-// console.log(gen.return('abc'));
-// console.log(gen.next());
+console.log(gen.next());
+console.log(gen.return('abc'));
+console.log(gen.next());
 
 // 5. throw
 // throw method를 호출할 경우 예외가 발생된 것으로 인식된다.
@@ -84,6 +82,7 @@ function* f1() {
     yield 30;
 }
 // done 값이 true가 될 때까지 반복한다.
+// @TODO iterable만인지? iterator만인지? 둘다인지?
 for (const v of f1()) {
     console.log(v);
 }
