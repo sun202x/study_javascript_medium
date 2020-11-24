@@ -75,14 +75,13 @@ const gen = f1();
 // generator는 iterable이자 iterator라고 할 수 있다.
 console.log(gen[Symbol.iterator]() === gen);
 
-// iterator는 for of 문법과 전개 연산자에서 유용하게 쓰인다.
+// iterable은 for of 문법과 전개 연산자에서 유용하게 쓰인다.
 function* f1() {
     yield 10;
     yield 20;
     yield 30;
 }
 // done 값이 true가 될 때까지 반복한다.
-// @TODO iterable만인지? iterator만인지? 둘다인지?
 for (const v of f1()) {
     console.log(v);
 }
