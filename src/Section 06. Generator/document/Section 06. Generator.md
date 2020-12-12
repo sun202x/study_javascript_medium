@@ -272,7 +272,7 @@ generator는 실행을 멈추고 재개할 수 있기 대문에 멀티태스킹�
 
 일반적으로 OS는 선점형 멀티태스킹을 사용한다.
 
-![multitasking](./image/preemptive_multitasking.png)
+![multitasking](../image/preemptive_multitasking.png)
 
 ```javascript
 function* minsu() {

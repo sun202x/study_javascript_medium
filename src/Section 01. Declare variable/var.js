@@ -13,7 +13,7 @@ function example() {
 console.log(i);
 
 
-// 'use strict'; // 이런식으로 use string를 선언하면 명시적으로 ReferenceError가 발생한다.
+'use strict'; // 이런식으로 use string를 선언하면 명시적으로 ReferenceError가 발생한다.
 function example1() {
     i = 1; // 전역에 선언된다.
 }
